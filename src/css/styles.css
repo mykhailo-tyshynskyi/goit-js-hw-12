@@ -14,7 +14,9 @@ header {
   padding-top: 36px;
   padding-bottom: 32px;
 }
-
+footer{
+  height: 32px;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +71,41 @@ header {
 .accent {
   font-weight: 600;
 }
+input {
+  width: 272px;
+  height: 40px;
+  border-color: #808080;
+  border-radius:4px ;
+  font-size: 16px;
+}
+input:hover, 
+input:focus{
+  border-color: #000;
+}
+input:focus{
+  border-color: #4E75FF;
+  color: #2E2F42;
+  outline: none;
+}
 
+button {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #4E75FF;
+  font-weight: 500;
+  font-size: 16px;
+  
+}
+button:hover{
+  background-color: #6C8CFF;}
+
+  .load-more {
+    margin:32px auto;
+    display: block;
+  }
 /*============================*/
 
 .loader {
@@ -82,8 +118,7 @@ header {
   border-color: #000 #000 transparent transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 28px auto;
 }
 .loader::after,
 .loader::before {

@@ -6,11 +6,9 @@ export let lightbox = new SimpleLightbox('.gallery-item a', {
   captionDelay: 250,
 });
 
-
-
-
-
+const loader = document.querySelector('.loader');
 const container = document.querySelector('.gallery');
+const loadMoreBTN = document.querySelector('.load-more');
 
 export function createGallery(images) {
   const murkup = images
@@ -52,20 +50,26 @@ export function createGallery(images) {
     })
     .join('');
 
-   container.innerHTML = murkup;
-    lightbox.refresh();
+  container.insertAdjacentHTML('beforeend', murkup);
+  lightbox.refresh();
 }
 
 export function clearGallery() {
-   container.innerHTML = '';
+  container.innerHTML = '';
 }
 
 export function showLoader() {
-  const loader = document.querySelector('.loader');
   loader.classList.remove('isHiden');
 }
 
 export function hideLoader() {
-  const loader = document.querySelector('.loader');
   loader.classList.add('isHiden');
+}
+
+export function showMoreBTN() {
+  loadMoreBTN.classList.remove('isHiden');
+}
+
+export function hideMoreBTN() {
+  loadMoreBTN.classList.add('isHiden');
 }
